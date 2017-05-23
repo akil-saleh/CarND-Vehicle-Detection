@@ -70,10 +70,18 @@ For large windows :-
 
 ####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+Ultimately I searched on using Spatial Binning, HOG features plus histograms of color in the feature vector, which provided a good result. Examples of final output is displayed in cell XXXX of IPython notebook. 
 
-![alt text][image4]
----
+Below parameters are used for the Spatial Binning, HOG features plus histograms of color.
+
+      1) Color Channel - RGB
+      2) Orientation bins - 8
+      3) Pixels per cell - 8
+      4) Cells per block - 2
+      5) Histogram Bins - 48
+      6) Histogram Bins Range - (0, 256)
+      7) Spatial Image Size - (16, 16)
+
 
 ### Video Implementation
 
@@ -84,8 +92,7 @@ Here's a [link to my video result](./project_video.mp4)
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
-
-Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
+Example of heatmap and boundbox overlaid on the test images is displayed in of cell XXXX of IPython notebook. 
 
 ### Here are six frames and their corresponding heatmaps:
 
@@ -96,8 +103,6 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
 ![alt text][image7]
-
-
 
 ---
 
