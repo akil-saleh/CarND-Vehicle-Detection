@@ -84,5 +84,10 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+Below are the few probelms I faced.
+
+1) matplotlib reads png images on scale of 0 to 1. To add to the confusion, matplotlib image will read .jpg images in on a scale of 0 to 255. Eventhough this was mentioned as caution in the project tips, I missed it initially and it created problem. I was getting good accuracy with test result with SVM classifier. But on test images I was unable to find the vehicles.
+2) Removing false positives is another problem I faced. I have used some techniques mentioned above to remove false positives but still it's not compeletely removed. 
+
+Pipleline will face problems with more complicated situations. I beleive combining this with deep learning and doing further tuning with parameters and combination of hog, color space etc will be able to improve the pipeline.
 
