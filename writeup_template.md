@@ -33,6 +33,9 @@ Example using HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `
 ####2. Explain how you settled on your final choice of HOG parameters.
 
 I tried various combinations of parameters and finally settled for below parameters through trial and error and through some help from the Udacity forums.
+* orient = 8
+* pixels_per_cell = 8
+* cells_per_block = 2
 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
@@ -74,13 +77,12 @@ Ultimately I searched on using Spatial Binning, HOG features plus histograms of 
 
 Below parameters are used for the Spatial Binning, HOG features plus histograms of color.
 
-      1) Color Channel - RGB
-      2) Orientation bins - 8
-      3) Pixels per cell - 8
-      4) Cells per block - 2
-      5) Histogram Bins - 48
-      6) Histogram Bins Range - (0, 256)
-      7) Spatial Image Size - (16, 16)
+      * Orientation bins - 8
+      * Pixels per cell - 8
+      * Cells per block - 2
+      * Histogram Bins - 48
+      * Histogram Bins Range - (0, 256)
+      * Spatial Image Size - (16, 16)
 
 
 ### Video Implementation
