@@ -103,7 +103,7 @@ Various example of heatmap and boundbox overlaid on the test images is displayed
 
 Below are the few probelms I faced.
 
-1) matplotlib reads png images on scale of 0 to 1. To add to the confusion, matplotlib image will read .jpg images in on a scale of 0 to 255. Eventhough this was mentioned as caution in the project tips, I missed it initially and it created problem. I was getting good accuracy with test result with SVM classifier. But on test images I was unable to find the vehicles.
+1) matplotlib reads png images on scale of 0 to 1. To add to the confusion, matplotlib image will read .jpg images in on a scale of 0 to 255. Eventhough this was mentioned as caution in the project tips, I missed it initially and it created problem. I was getting good accuracy with test result with SVM classifier. But on test images I was unable to find the vehicles since classifer was trained on png images and test images are jpg images.
 2) Removing false positives is another problem I faced. I have used some techniques mentioned above to remove false positives but still it's not compeletely removed. 
 
 Pipleline will face problems with more complicated situations. I beleive combining this with deep learning and doing further tuning with parameters and combination of hog, color space etc will be able to improve the pipeline.
