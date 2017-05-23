@@ -36,13 +36,34 @@ I tried various combinations of parameters and finally settled for below paramet
 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a SVM using default rbf kernal and probability. I got accuracy of about 99.55% on test set. 
+I trained a SVM using default rbf kernal and probability. I got accuracy of about 99.55% on test set. I also used different combination of hog features, color hist and Spatial Binning and then scaled them accordingly to form the train and test sets.  
 
 ###Sliding Window Search
 
 ####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I decided to search random window positions 
+I decided to search on bottom half of the image since car are not likely to found in upper half of image. I used three different window sizes. Function for Sliding window search is present in cell XXXX of IPython notebook. pipeline is present in cell XXXX of IPython notebook, which uses three different window size searches. 
+
+For small windows :-
+
+      1) Window Size - (64, 64)
+      2) X Start Stop - (640, 1280)
+      3) Y Start Stop - (300, 450)
+      4) Overlap - (0.6, 0.6)
+
+For medium windows :-
+
+      1) Window Size - (96, 96)
+      2) X Start Stop - (640, 1280)
+      3) Y Start Stop - (300, 500)
+      4) Overlap - (0.8, 0.8)
+
+For large windows :-
+
+      1) Window Size - (128, 128)
+      2) X Start Stop - (640, 1280)
+      3) Y Start Stop - (400, 550)
+      4) Overlap - (0.85, 0.85)
 
 
 ![alt text][image3]
