@@ -47,29 +47,20 @@ I trained a SVM using default rbf kernal and probability. I got accuracy of abou
 
 I decided to search on bottom half of the image since car are not likely to found in upper half of image. I used three different window sizes. Function for Sliding window search is present in cell XXXX of IPython notebook. pipeline is present in cell XXXX of IPython notebook, which uses three different window size searches. 
 
-For small windows :-
-
-      1) Window Size - (64, 64)
-      2) X Start Stop - (640, 1280)
-      3) Y Start Stop - (300, 450)
-      4) Overlap - (0.6, 0.6)
-
-For medium windows :-
+1st set of windows :-
 
       1) Window Size - (96, 96)
       2) X Start Stop - (640, 1280)
       3) Y Start Stop - (300, 500)
       4) Overlap - (0.8, 0.8)
 
-For large windows :-
+2nd set of windows :-
 
       1) Window Size - (128, 128)
       2) X Start Stop - (640, 1280)
       3) Y Start Stop - (400, 550)
       4) Overlap - (0.85, 0.85)
 
-
-![alt text][image3]
 
 ####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
